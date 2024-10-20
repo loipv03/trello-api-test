@@ -25,7 +25,7 @@ app.use(cookieParser());
 
 app.use(express.json())
 app.use(cors({
-    origin: 'https://trello-app-1.vercel.app',
+    origin: ['https://trello-app-1.vercel.app', 'http://localhost:3000'],
     credentials: true,
 }))
 
@@ -40,7 +40,7 @@ app.use('/api', workspaceRouter)
 
 app.use(errorHandler);
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 4000;
 
 const startServer = async () => {
     try {
