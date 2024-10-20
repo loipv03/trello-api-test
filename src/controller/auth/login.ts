@@ -36,8 +36,8 @@ const login = async (req: AuthenticatedRequest, res: Response, next: NextFunctio
 
         res.cookie('access_token', access_token, {
             httpOnly: true,
-            secure: false,
-            sameSite: 'lax',
+            secure: true,
+            sameSite: 'strict',
             path: '/',
             // domain: 'https://trello-app-1.vercel.app',
             maxAge: 7 * 24 * 60 * 60 * 1000
