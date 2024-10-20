@@ -39,7 +39,7 @@ const login = async (req: AuthenticatedRequest, res: Response, next: NextFunctio
             secure: false,
             sameSite: 'none',
             path: '/',
-            domain: 'https://trello-app-1.vercel.app',
+            // domain: 'https://trello-app-1.vercel.app',
             maxAge: 7 * 24 * 60 * 60 * 1000
         });
 
@@ -48,7 +48,7 @@ const login = async (req: AuthenticatedRequest, res: Response, next: NextFunctio
             secure: false,
             sameSite: 'none',
             path: '/',
-            domain: 'https://trello-app-1.vercel.app',
+            // domain: 'https://trello-app-1.vercel.app',
             maxAge: 7 * 24 * 60 * 60 * 1000
         });
 
