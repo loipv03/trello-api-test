@@ -36,7 +36,7 @@ const login = async (req: AuthenticatedRequest, res: Response, next: NextFunctio
 
         res.cookie('access_token', access_token, {
             httpOnly: true,
-            secure: true,
+            secure: false,
             sameSite: 'none',
             path: '/',
             domain: 'http://localhost:3000',
@@ -45,7 +45,7 @@ const login = async (req: AuthenticatedRequest, res: Response, next: NextFunctio
 
         res.cookie('refresh_token', refresh_Token, {
             httpOnly: true,
-            secure: true,
+            secure: false,
             sameSite: 'none',
             path: '/',
             domain: 'http://localhost:3000',
