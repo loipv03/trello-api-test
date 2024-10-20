@@ -45,11 +45,12 @@ const login = async (req: AuthenticatedRequest, res: Response, next: NextFunctio
 
         res.cookie('refresh_token', refresh_Token, {
             httpOnly: true,
-            secure: false,
-            sameSite: 'lax',
+            secure: true,
+            sameSite: 'none',
             path: '/',
-            domain: 'https://trello-app-1.vercel.app',
-            maxAge: 7 * 24 * 60 * 60 * 1000
+            // domain: 'https://trello-app-1.vercel.app',
+            maxAge: 7 * 24 * 60 * 60 * 1000,
+
         });
 
         return res.status(200).json({
