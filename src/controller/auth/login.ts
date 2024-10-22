@@ -39,7 +39,7 @@ const login = async (req: AuthenticatedRequest, res: Response, next: NextFunctio
             secure: true,
             sameSite: 'none',
             path: '/',
-            maxAge: 7 * 24 * 60 * 60 * 1000
+            maxAge: 1 * 24 * 60 * 60 * 1000
         });
 
         res.cookie('refresh_token', refresh_Token, {
@@ -47,7 +47,7 @@ const login = async (req: AuthenticatedRequest, res: Response, next: NextFunctio
             secure: true,
             sameSite: 'none',
             path: '/',
-            maxAge: 7 * 24 * 60 * 60 * 1000
+            maxAge: 1 * 24 * 60 * 60 * 1000
         });
 
         return res.status(200).json({
